@@ -20,12 +20,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/*")
+                .antMatchers("/api/v*/**")
                 .permitAll()
                 .anyRequest()
                 .authenticated().and()
                 .formLogin()
-                .loginPage("https://login-form-authentication.herokuapp.com/login")
+                .loginPage("https://login-form-authentication.herokuapp.com/")
                 .permitAll();
     }
 }
