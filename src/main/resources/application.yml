@@ -6,7 +6,7 @@ server:
 spring:
   datasource:
     password: 129b6232bd2c7c54d9e65b51d7ef8f1f2f79b170ddddf89d1a3277954cd8b634
-    url: postgres://zjlajsspxqydvy:129b6232bd2c7c54d9e65b51d7ef8f1f2f79b170ddddf89d1a3277954cd8b634@ec2-52-72-155-37.compute-1.amazonaws.com:5432/dckgfi236043d6
+    url: jdbc:postgresql://ec2-52-72-155-37.compute-1.amazonaws.com:5432/dckgfi236043d6
     username: zjlajsspxqydvy
   session:
     store-type: jdbc
