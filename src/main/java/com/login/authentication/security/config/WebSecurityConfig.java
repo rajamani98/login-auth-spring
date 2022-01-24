@@ -1,6 +1,5 @@
 package com.login.authentication.security.config;
 
-import com.login.authentication.appuser.AppUserService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpMethod;
 import org.springframework.context.annotation.Configuration;
@@ -13,19 +12,16 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
-    private final AppUserService appUserService;
-
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/api/v*/**")
+                .antMatchers("/api*/v*/login**")
                 .permitAll()
-                .anyRequest()
-                .authenticated().and()
+                .and()
                 .formLogin()
-                .loginPage("https://login-form-authentication.herokuapp.com/")
+                .loginPage("/login")
                 .permitAll();
     }
 }
