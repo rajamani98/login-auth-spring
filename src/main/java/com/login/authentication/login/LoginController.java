@@ -26,7 +26,7 @@ public class LoginController {
     public boolean login(@RequestBody LoginRequest request, HttpServletRequest httpServletRequest) {
         HttpSession httpSession = httpServletRequest.getSession();
         httpSession.setAttribute("emailId", request.getEmailId());
-        System.out.println("****************************************************************"));
+        System.out.println("****************************************************************");
         System.out.println("email :"+request.getEmailId());
         if (loginService.loginUser(request.getEmailId()))
             return true;
