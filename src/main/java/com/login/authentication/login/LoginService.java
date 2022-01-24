@@ -21,13 +21,23 @@ public class LoginService {
         otpVerification = new OtpVerification();
         String otp = otpVerification.getOtpNumber();
         String emailContent = "WELCOME, Your OTP is : " + otp;
+        System.out.println(*************************************************************);
+        System.out.println(emailContent);
         AppUser user = appUserRepository.findByEmail(emailId);
         if (user == null)
             user = new AppUser(emailId, otp);
         else
             user.setOtp(otp);
+        System.out.println(*************************************************************);
+        System.out.println(user);
+        System.out.println(user.toString());
         appUserService.signInUser(user);
+        try{
         emailSender.send(emailId, emailContent);
+        }
+        catch(Exception e){
+            System.out.println("failed to send "+ e);
+        }
         return true;
     }
 
