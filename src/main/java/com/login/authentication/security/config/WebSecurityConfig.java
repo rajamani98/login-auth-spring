@@ -22,13 +22,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers("/*")
                 .permitAll()
-                .antMatchers(HttpMethod.POST,"/api/v*/login**").permitAll()
-	            .antMatchers(HttpMethod.POST, "/api/v*/verify**").permitAll()
-	            .antMatchers(HttpMethod.GET,"/api/v*/logout**").permitAll()
                 .anyRequest()
                 .authenticated().and()
                 .formLogin()
-                .loginPage("https://login-form-authentication.herokuapp.com/")
+                .loginPage("https://login-form-authentication.herokuapp.com/login")
                 .permitAll();
     }
 }
