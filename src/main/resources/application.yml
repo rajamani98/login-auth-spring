@@ -5,9 +5,9 @@ server:
 
 spring:
   datasource:
-    password: 4b46e3cf93cee9d5d2067289dedec01001d423aa02586d27d58bdaadc84fbcbb
-    url: postgres://qfhsxuapgaxisa:4b46e3cf93cee9d5d2067289dedec01001d423aa02586d27d58bdaadc84fbcbb@ec2-44-199-52-133.compute-1.amazonaws.com:5432/d4nd55rp1tncao
-    username: qfhsxuapgaxisa
+    password: 129b6232bd2c7c54d9e65b51d7ef8f1f2f79b170ddddf89d1a3277954cd8b634
+    url: postgres://zjlajsspxqydvy:129b6232bd2c7c54d9e65b51d7ef8f1f2f79b170ddddf89d1a3277954cd8b634@ec2-52-72-155-37.compute-1.amazonaws.com:5432/dckgfi236043d6
+    username: zjlajsspxqydvy
   session:
     store-type: jdbc
     jdbc:
