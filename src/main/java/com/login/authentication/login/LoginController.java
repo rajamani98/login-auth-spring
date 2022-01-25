@@ -14,7 +14,7 @@ import javax.servlet.http.HttpSession;
 import javax.ws.rs.Produces;
 
 
-@CrossOrigin(origins = "https://login-form-authentication.herokuapp.com/")
+@CrossOrigin
 @RestController
 @RequestMapping(path = "api/v1")
 @AllArgsConstructor
